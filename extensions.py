@@ -25,7 +25,7 @@ class Converter:
             raise ConverterException('Ошибка ввода. Сумма должна быть числом.')
         else:
             if amount < 0:
-                raise ConverterException('Ошибка ввода.Сумма должна быть положительной.')
+                raise ConverterException('Ошибка ввода данных. Сумма должна быть положительной.')
 
         if base == quote:
             raise ConverterException(f'Указана одинаковая валюта для пересчета - {base}')

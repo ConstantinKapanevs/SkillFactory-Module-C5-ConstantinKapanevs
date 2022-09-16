@@ -10,13 +10,13 @@ bot = telebot.TeleBot(TOKEN)
 def greet_function(message):
     text = "Добро пожаловать в бот пересчета валюты.\n" \
            "Для получения информации о доступных\n" \
-           "валютах используйте /currency.\n" \
+           "валютах используйте /info.\n" \
            "Формат ввода для пересчета:\n" \
            "<Базовая валюта> <Валюта, в которую пересчитывать> <Сумма в базовой валюте>."
     bot.send_message(message.chat.id, text)
 
 
-@bot.message_handler(commands=['currency', ])
+@bot.message_handler(commands=['info', ])
 def info_function(message):
     text = f"Доступные валюты для пересчета:\n" \
            f"{', '.join(keys.keys())}"
