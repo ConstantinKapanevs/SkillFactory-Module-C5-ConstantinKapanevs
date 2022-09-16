@@ -22,7 +22,7 @@ class Converter:
             amount = float(amount)
 
         except ValueError:
-            raise ConverterException('Ошибка ввода. Сумма должна быть числом.')
+            raise ConverterException('Ошибка ввода данных. Сумма должна быть числом.')
         else:
             if amount < 0:
                 raise ConverterException('Ошибка ввода данных. Сумма должна быть положительной.')
